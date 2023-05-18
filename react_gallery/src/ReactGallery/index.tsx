@@ -1,7 +1,18 @@
+import { useState } from 'react';
+
+import { MainPhoto } from './MainPhoto';
+
+import { PreviewGallery } from './PreviewGallery';
+
+import { Navigation } from './Navigation';
+
+import { Photo } from './types';
+
+import style from './index.module.scss';
+
 interface ReactGalleryProps {
 	photos: Photo[]
 }
-
 
 export const ReactGallery: React.FC<ReactGalleryProps> = ({
 	photos,
@@ -21,12 +32,12 @@ export const ReactGallery: React.FC<ReactGalleryProps> = ({
 			<div className={style.reactGalleryContainer}>
 			<MainPhoto
 				prevPhoto={prevPhoto}
-				currentPhoto={activePhoto}
+				activePhoto={activePhoto}
 				nextPhoto={nextPhoto}
-				className {style.reactMainPhoto}
+				className={style.reactMainPhoto}
 				/>
 				<Navigation
-					className {style.reactNavigation}
+					className={style.reactNavigation}
 					disabledPrev={!prevPhoto}
 					disabledNext={!nextPhoto}
 					onPrevClick={() => {
