@@ -1,4 +1,8 @@
+import cl from 'classnames';
+
 import { Photo, CommonClassProps } from '../types';
+
+import style from './index.module.scss';
 
 interface MainPhotoProps extends CommonClassProps {
 	prevPhoto?:Photo;
@@ -10,6 +14,27 @@ export const MainPhoto: React.FC<MainPhotoProps> = ({
 	prevPhoto,
 	activePhoto,
 	nextPhoto,
+	className
 }) => (
-	<div>Main Photo</div>
+	<div className={cl(className, style.mainPhoto)}>
+		{prevPhoto && (
+			<img
+				className={style.mainPhotoImagePrev}
+				src={prevPhoto.src}
+				alt={prevPhoto.decription}
+			/>
+		)}
+		<img
+			className={style.mainPhotoImage}
+			src={activePhoto.src}
+			alt={activePhoto.decription}
+		/>
+		{nextPhoto && (
+			<img
+				className={style.mainPhotoImageNext}
+				src={nextPhoto.src}
+				alt={nextPhoto.decription}
+			/>
+		)}
+	</div>
 );

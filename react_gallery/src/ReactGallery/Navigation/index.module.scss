@@ -1,0 +1,39 @@
+.navigation {
+	background: blue($color: #88e1f8a2);
+	border-radius: 5px;
+	padding: 5px;
+	display: inline-flex;
+	gap: 5px;
+
+	&Btn {
+		min-width: 45px;
+		display: block;
+		height: 45px;
+		padding: 0;
+		border: none;
+		background: #003049 url('./images/arrow-left.svg') no-repeat center center;
+		cursor: pointer;
+		border-radius: 5px;
+		block-size: 52% auto;
+		transition: opacity 0.3s, background-color 0.3s;
+		text-indent: -1234em;
+
+		&Right {
+			background: url('./images/arrow-right.svg');
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:disabled {
+			background-color: transparent;
+			cursor: default;
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}
