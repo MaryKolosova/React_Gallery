@@ -27,7 +27,7 @@ export const Navigation: React.FC<NavigationProps> = ({
 			)}
 			onClick={onPrevClick}
 		>
-			Previous
+			Show previous photo
 		</button>
 		<button
 			disabled={disabledNext}
@@ -37,7 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({
 			)}
 			onClick={onNextClick}
 		>
-			Next
+			Show next photo
 		</button>
 	</div>
 );

@@ -1,6 +1,12 @@
 #root {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    margin-top: 20px;
+    padding: 1.5rem;
     text-align: center;
+    background: #f7f9f4;
+    border-radius: 20px;
+}
+html {
+    background-color: #79a9c0a3;
 }
