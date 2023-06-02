@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
 
 import { MainPhoto } from './MainPhoto';
@@ -22,7 +23,6 @@ export const ReactGallery: React.FC<ReactGalleryProps> = ({
 	}
 
 	const [ indexActivePhoto, setIndexActivePhoto ] = useState(0);
-	const activePhoto = photos[indexActivePhoto];
 	const prevPhoto = photos[indexActivePhoto - 1];
 	const nextPhoto = photos[indexActivePhoto + 1];
 
@@ -31,9 +31,8 @@ export const ReactGallery: React.FC<ReactGalleryProps> = ({
 		<div className={style.reactGallery}>
 			<div className={style.reactGalleryContainer}>
 			<MainPhoto
-				prevPhoto={prevPhoto}
-				activePhoto={activePhoto}
-				nextPhoto={nextPhoto}
+				photos={photos}
+				indexActivePhoto={indexActivePhoto}
 				/>
 			<Navigation
 				className={style.reactGalleryNavigation}
@@ -51,6 +50,7 @@ export const ReactGallery: React.FC<ReactGalleryProps> = ({
 				activePhotoIndex={indexActivePhoto}
 				photos={photos}
 				className={style.reactGalleryPreviewList}
+				setNewPhoto={setIndexActivePhoto}
 			/>
 		</div>
 	)
