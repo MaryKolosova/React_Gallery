@@ -2,7 +2,7 @@ export interface Photo {
 	id: number;
 	src: string;
 	preview: string;
-	decription: string;
+	description: string;
 }
 
 export interface CommonClassProps {
