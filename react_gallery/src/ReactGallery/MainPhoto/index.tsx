@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useRef, useMemo, useLayoutEffect, useState } from 'react';
 
 import cl from 'classnames';
@@ -89,40 +92,40 @@ export const MainPhoto: React.FC<MainPhotoProps> = ({
 
 	return useMemo(() => (
 		<div
-			className={cl(className, style.mainPhoto)}
+			className={cl(style.mainPhoto, className)}
 			ref={containerRef}
 		>
 			{photos.map((photo, id) => (
 				<img
 					key={photo.id}
 					className={style.mainPhotoImage}
-					data-aria-activedescendant={id === prevActiveIndexPhoto}
+					data-active={id === prevActiveIndexPhoto}
 					src={photo.src}
 					alt={photo.description}
-					loading='lazy'
+					loading="lazy"
 				/>
 			))}
 		</div>
 	), []);
 	};
-	<div className={cl(className, style.mainPhoto)}>
-		{prevPhoto && (
-			<img
-				className={style.mainPhotoImagePrev}
-				src={prevPhoto.src}
-				alt={prevPhoto.description}
-			/>
-		)}
-		<img
-			className={style.mainPhotoImage}
-			src={activePhoto.src}
-			alt={activePhoto.description}
-		/>
-		{nextPhoto && (
-			<img
-				className={style.mainPhotoImageNext}
-				src={nextPhoto.src}
-				alt={nextPhoto.description}
-			/>
-		)}
-	</div>;
+	// <div className={cl(className, style.mainPhoto)}>
+	// 	{prevPhoto && (
+	// 		<img
+	// 			className={style.mainPhotoImagePrev}
+	// 			src={prevPhoto.src}
+	// 			alt={prevPhoto.description}
+	// 		/>
+	// 	)}
+	// 	<img
+	// 		className={style.mainPhotoImage}
+	// 		src={activePhoto.src}
+	// 		alt={activePhoto.description}
+	// 	/>
+	// 	{nextPhoto && (
+	// 		<img
+	// 			className={style.mainPhotoImageNext}
+	// 			src={nextPhoto.src}
+	// 			alt={nextPhoto.description}
+	// 		/>
+	// 	)}
+	// </div>;

@@ -41,7 +41,7 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
 					{photos.map((photo, id) => (
 						<li key={photo.id}>
 							<button
-								className={style.previewPreviewGallery}
+								className={style.previewGalleryPreview}
 								onClick={() => setNewPhoto(id)}
 							>
 								<img
