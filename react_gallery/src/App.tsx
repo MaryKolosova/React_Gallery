@@ -1,6 +1,6 @@
 import { ReactGallery } from "./ReactGallery";
 
-import style from './index.module.scss';
+//import style from './index.module.scss';
 
 function App() {
   return (
